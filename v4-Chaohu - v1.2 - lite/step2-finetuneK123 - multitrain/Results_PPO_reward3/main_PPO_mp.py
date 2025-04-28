@@ -23,8 +23,9 @@ import time
 Train=True
 init_train=False
 finetuneID = 200  #50,
+print(2)
 
-for trainID in [1]:
+for trainID in [1,2]:
     print(finetuneID,trainID)
 
     tf.compat.v1.reset_default_graph()
