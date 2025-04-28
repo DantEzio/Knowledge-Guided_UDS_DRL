@@ -23,6 +23,7 @@ import time
 Train=True
 init_train=False
 tf.compat.v1.reset_default_graph()
+print('K1 IR test')
 
 env_params = {
     'orf':'./SWMM/chaohu',
@@ -40,7 +41,7 @@ exraindata = np.load('../rainfall/normlized_extended_rainfall.npy',allow_pickle=
 # 记录不同pretrain步数模型的初始return
 IR = []
 
-for finetuneID in range(0,510,10):
+for finetuneID in range(0,500,10):
 
     print(finetuneID)
 

@@ -24,7 +24,7 @@ Train=True
 init_train=False
 finetuneID = 200  #50,
 
-print(finetuneID)
+print(finetuneID,201)
 
 tf.compat.v1.reset_default_graph()
 
