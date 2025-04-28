@@ -1,0 +1,82 @@
+# Configuration file for scenario chaohu
+
+# name of scearnio
+name: chaohu
+# state definitions
+states:
+      - !!python/tuple
+        - "CC-storage"
+        - depthN
+      - !!python/tuple
+        - "JK-storage"
+        - depthN
+      - !!python/tuple
+        - "YS02001757"
+        - depthN
+      - !!python/tuple
+        - "YS02001907"
+        - depthN
+      - !!python/tuple
+        - "WS02006248"
+        - depthN
+      - !!python/tuple
+        - "WS02006229"
+        - depthN
+      - !!python/tuple
+        - "YS02001757CaochengTiaoxuchi"
+        - flow
+      - !!python/tuple
+        - "YS02001793JiankangQianchi"
+        - flow
+      - !!python/tuple
+        - "YS02001649YS02001757"
+        - flow
+      - !!python/tuple
+        - "YS02001907YS02006553"
+        - flow
+      - !!python/tuple
+        - "WS02006248WS02006247"
+        - flow
+      - !!python/tuple
+        - "WS02006229WS02006228"
+        - flow
+      - !!python/tuple
+        - "RG"
+        - rainfall
+
+
+# Action space
+action_assets:
+      - "CC-R1"
+      - "CC-R2"
+      - "CC-S1"
+      - "CC-S2"
+      - "JK-R1"
+      - "JK-R2"
+      - "JK-S"
+
+# Performance Targets (ID,attribute,weight)
+reward_targets:
+    #flooding of the entire system
+      - !!python/tuple
+        - "system"
+        - flooding  
+        - 1
+    #CSO
+      - !!python/tuple
+        - "CC-1"
+        - total_outflow
+        - 1
+      - !!python/tuple
+        - "CC-2"
+        - total_outflow
+        - 1
+      - !!python/tuple
+        - "JK-1"
+        - total_outflow
+        - 1
+      - !!python/tuple
+        - "JK-2"
+        - total_outflow
+        - 1
+
