@@ -24,7 +24,7 @@ Train=True
 init_train=False
 finetuneID = 200  #50,
 
-print(finetuneID)
+print(finetuneID,111)
 
 tf.compat.v1.reset_default_graph()
 
@@ -66,7 +66,7 @@ agent_params={
     'gamma':0.01,
     'epsilon':0.2, ################################# finetune时因为已经经过训练，所以epsilon可以低一些
     'ep_min':1e-50,
-    'ep_decay':0.5,
+    'ep_decay':0.05,
 
     'action_table':pd.read_csv('../SWMM/action_table.csv').values[:,1:],
 }
