@@ -22,13 +22,13 @@ import time
 
 Train=True
 init_train=False
-finetuneID = 150  #50,
+finetuneID = 200  #50,
 
 #多次训练获取训练曲线，以此确认算法稳定性
 
-for trainID in [1,2,3]:
+for trainID in [1]:
 
-    print(finetuneID,trainID)
+    print(finetuneID,trainID,'K1')
 
     tf.compat.v1.reset_default_graph()
 
@@ -68,9 +68,9 @@ for trainID in [1,2,3]:
         
         'training_step':251,
         'gamma':0.01,
-        'epsilon':0.01, ################################# finetune时因为已经经过训练，所以epsilon可以低一些
+        'epsilon':1, ################################# finetune时因为已经经过训练，所以epsilon可以低一些
         'ep_min':1e-50,
-        'ep_decay':0.05,
+        'ep_decay':0.2,
 
         'action_table':pd.read_csv('../SWMM/action_table.csv').values[:,1:],
     }
